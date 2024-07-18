@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/logo_v2_bg.png">
+    <title>ZENISTA</title>
+    <style>
+        .nav {
+            position: fixed;
+            z-index: 10;
+            width: 100%;
+        }
+
+        .b1 {
+            color: #BD6227;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Default text shadow */
+        }
+
+        .b1:hover {
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 100px #BD6227, 0 0 5px #a54504;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-image: url('/img/ezgif-5-f962153226.gif');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="h-screen relative text-white text-xl ">
+        <nav id="navbar" class="h-20 sm:h-20 nav transition duration-500 flex-col justify-center items-center bg-transparent">
+            <div class="flex sm:flex-row flex-col h-full justify-between items-center py-3 bg-transparent text-black">
+                <div class="flex justify-between items-center w-full sm:w-1/2 pl-3">
+                    <div class="sm:text-2xl text-lg">
+                        <a href="#about" class="flex items-center">
+                            <img class="sm:w-12 w-11" src="img/2-removebg-preview.png" alt="">
+                            <!-- <h1 class="" style="color: #BD6227;">ZENISTA'24</h1> -->
+                            <img class="w-1/3" src="img/3-removebg-preview.png" alt="">
+                        </a>
+                    </div>
+                    <div style="color: #b55d00;" id="mobileNav" class="sm:hidden pr-5" onclick="nav()">
+                        <svg id="toggleNavBtn" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 14 14">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M13.5 2H.5m13 5H.5m13 5H.5"/>
+                        </svg>
+                        <div id="cross" class="hidden"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 15 15"><path fill="currentColor" fill-rule="evenodd" d="M12.854 2.854a.5.5 0 0 0-.708-.708L7.5 6.793 2.854 2.146a.5.5 0 1 0-.708.708L6.793 7.5l-4.647 4.646a.5.5 0 0 0 .708.708L7.5 8.207l4.646 4.647a.5.5 0 0 0 .708-.708L8.207 7.5z" clip-rule="evenodd"/></svg></div>
+                    </div>
+                </div>
+                <div id="res_nav" class="sm:pr-10 hidden sm:flex sm:flex-row flex-col pt-14 sm:pt-0 sm:bg-transparent bg-transparent sm:w-max w-full pb-96 sm:pb-0">
+                    <ul class="sm:flex-row flex flex-col text-2xl font-mono w-full justify-center text-center">
+                        <li class="b1 transition duration-300 p-4 sm:p-6 ease-in-out"><a href="#about">HOME</a></li>
+                        <li class="b1 transition duration-300 p-4 sm:p-6 ease-in-out"><a href="#projects">ABOUT</a></li>
+                        <li class="b1 transition duration-300 p-4 sm:p-6 ease-in-out"><a href="#service">EVENTS</a></li>
+                        <li class="b1 transition duration-300 p-4 sm:p-6 ease-in-out"><a href="#gallery">OUR TEAM</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>      
+        <div class="flex items-center justify-center pt-16 flex-col"><img class="w-10/12 " src="/img/webfront.png" alt=""></div>
+        <div class="flex justify-center items-center flex-col space-y-5 p-6" id="about">
+            <div><h1 style="color: white; text-shadow: 0 0 5px orange,0 0 15px orange,0 0 20px orange,0 0 40px orange,0 0 60px red,0 0 10px #ff8400,0 0 10px red;" class="text-4xl">ABOUT ZENISTA</h1></div>
+            <div class="w-5/6 rounded-2xl mt-4" style="background-color: #b55d00;"><p class="p-8">Zenista is a nationwide technical fest hosted by the department of Electronics and Communication Engineering of Sri Sairam Engineering College. Every year, Zenista brings pupils from various colleges whose minds are challenged by unique issues from the real world, aiding them in developing as engineers. We are hosting this festival for the 26th time this year, and we have introduced some brand-new, exciting events. Come, let's experiment, establish, and expand!</p></div>
+        </div>
+        <div>
+            <div class="flex justify-center items-center"><h1 style="color: white; text-shadow: 0 0 5px orange,0 0 15px orange,0 0 20px orange,0 0 40px orange,0 0 60px red,0 0 10px #ff8400,0 0 10px red;" class="text-4xl">EVENTS</h1></div>
+            <div class="flex flex-row space-x-10 justify-around p-10">
+                <div class="h-28 border hover:border-white rounded-2xl w-full"></div>
+                <div class="h-28 border hover:border-white rounded-2xl w-full"></div>
+                <div class="h-28 border hover:border-white rounded-2xl w-full"></div>
+            </div>
+            <div class="flex flex-row space-x-10 justify-around p-10">
+                <div class="h-28 border hover:border-white rounded-2xl w-full"></div>
+                <div class="h-28 border hover:border-white rounded-2xl w-full"></div>
+                <div class="h-28 border hover:border-white rounded-2xl w-full"></div>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        function nav() {
+            const mobileNav = document.getElementById("res_nav");
+            const body = document.body;
+            const toggleNavBtn = document.getElementById("toggleNavBtn");
+            const cross = document.getElementById("cross");
+
+            if (mobileNav) {
+                const currentDisplay = window.getComputedStyle(mobileNav).display;
+                if (currentDisplay === "none") {
+                    mobileNav.style.display = "flex";
+                    body.style.overflowY = "hidden";
+                    toggleNavBtn.style.display = "none";
+                    cross.style.display = "flex";
+                } else {
+                    mobileNav.style.display = "none";
+                    body.style.overflowY = "auto";
+                    toggleNavBtn.style.display = "flex";
+                    cross.style.display = "none";
+                }
+            }
+        }
+
+        document.querySelectorAll('#res_nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function () {
+                if (window.innerWidth <= 640) {
+                    nav();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
